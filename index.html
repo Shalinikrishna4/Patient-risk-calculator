@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Risk Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🩺 Patient Risk Calculator</h1>
+      <form id="riskForm">
+        <label for="patientID">🔢 Patient ID:</label>
+        <input type="text" id="patientID" name="patientID" required />
+
+        <label for="age">🎂 Age:</label>
+        <input type="number" id="age" name="age" min="18" required />
+
+        <label for="gender">🚻 Gender:</label>
+        <select id="gender" name="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+
+        <label for="bmi">⚖️ BMI:</label>
+        <input type="number" id="bmi" name="bmi" step="0.1" required />
+
+        <label for="diseaseName">🦠 Disease Name:</label>
+        <select id="diseaseName" name="diseaseName">
+          <option value="Diabetes">Diabetes</option>
+          <option value="COPD">COPD</option>
+          <option value="Heart Disease">Heart Disease</option>
+          <option value="Hypertension">Hypertension</option>
+          <option value="Chronic Kidney Disease">
+            Chronic Kidney Disease
+          </option>
+        </select>
+
+        <label for="multipleAdmits">🏥 Multiple Admissions:</label>
+        <select id="multipleAdmits" name="multipleAdmits">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+
+        <button type="button" onclick="calculateRisk()">⚡ Calculate Risk</button>
+      </form>
+
+      <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
